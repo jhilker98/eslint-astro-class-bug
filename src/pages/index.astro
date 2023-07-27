@@ -2,14 +2,19 @@
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body class="min-h-screen bg-slate-100">
+    <h1 class="text-5xl font-bold mb-8">
+      This should error with <span class="font-mono"
+        >prefers-class-list-directive</span
+      >.
+    </h1>
+    <h2 class:list={["text-3xl", "font-bold"]}>This should not error.</h2>
+  </body>
 </html>
