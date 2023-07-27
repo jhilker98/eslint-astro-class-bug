@@ -10,11 +10,16 @@
     <title>Astro</title>
   </head>
   <body class="min-h-screen bg-slate-100">
-    <h1 class="text-5xl font-bold mb-8">
-      This should error with <span class="font-mono"
-        >prefers-class-list-directive</span
-      >.
-    </h1>
-    <h2 class:list={["text-3xl", "font-bold"]}>This should not error.</h2>
+    <div
+      set:html="<h1 class='text-5xl font-bold mb-8'>This should error with the <span class='font-mono'>astro/no-set-html-directive</span> error."
+    />
+
+    <div>
+      <h3 class="text-3xl font-bold">
+        This should error with the <span class="font-mono"
+          >astro/prefer-class-list-directive</span
+        > rule.
+      </h3>
+    </div>
   </body>
 </html>
